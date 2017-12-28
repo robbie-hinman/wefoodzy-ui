@@ -4,6 +4,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { addTodo } from '../../actions'
+import { InputGroup, FormControl, FormGroup, Button } from 'react-bootstrap'
 
 let AddTodo = ({ dispatch }) => {
   let input
@@ -20,14 +21,17 @@ let AddTodo = ({ dispatch }) => {
               input.value = ''
             }}
         >
-          <input
-              ref={node => {
+        <FormGroup>
+        <InputGroup bsSize='lg'>
+        <FormControl type="text"   ref={node => {
                 input = node
-              }}
-          />
-          <button type="submit">
-            Add Todo
-          </button>
+              }} />
+            
+          <InputGroup.Button type="submit">
+            <Button>Add Todo</Button>
+          </InputGroup.Button>
+          </InputGroup>
+          </FormGroup>
         </form>
       </div>
   )
