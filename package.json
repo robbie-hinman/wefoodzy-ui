@@ -11,16 +11,29 @@
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.5",
     "react-router": "^2.8.1",
+    "react-scripts": "1.0.17",
     "redux": "^3.7.1"
   },
   "devDependencies": {
     "@storybook/react": "^3.1.8",
+    "babel-eslint": "^7.2.3",
+    "eslint": "^4.14.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-react": "^7.5.1",
+    "husky": "^0.13.4",
+    "lerna": "^2.5.1",
+    "lerna-changelog": "^0.6.0",
+    "lint-staged": "^3.6.1",
+    "prettier": "^1.6.1",
+    "prettier-eslint": "^8.7.0",
     "react-scripts": "1.0.10"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "eslint": "eslint --ext .jsx,.js src/",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "eject": "react-scripts eject"
   }

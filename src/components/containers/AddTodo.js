@@ -1,32 +1,32 @@
 /**
  * Created by robbie on 7/17/17.
  */
-import React from 'react'
-import { connect } from 'react-redux'
-import { addTodo } from '../../actions'
-import { InputGroup, FormControl, FormGroup, Button } from 'react-bootstrap'
+import React from 'react';
+import { connect } from 'react-redux';
+import { addTodo } from '../../actions';
+import { InputGroup, FormControl, FormGroup, Button } from 'react-bootstrap';
 
 let AddTodo = ({ dispatch }) => {
-  let input
+  let input;
 
   return (
       <div>
         <form
-            onSubmit={e => {
-              e.preventDefault()
+            onSubmit={(e) => {
+              e.preventDefault();
               if (!input.value.trim()) {
-                return
+                return;
               }
-              dispatch(addTodo(input.value))
-              input.value = ''
+              dispatch(addTodo(input.value));
+              input.value = '';
             }}
         >
         <FormGroup>
         <InputGroup bsSize='lg'>
-        <FormControl type="text"   ref={node => {
-                input = node
+        <FormControl type="text" ref={(node) => {
+                input = node;
               }} />
-            
+
           <InputGroup.Button type="submit">
             <Button>Add Todo</Button>
           </InputGroup.Button>
@@ -34,8 +34,8 @@ let AddTodo = ({ dispatch }) => {
           </FormGroup>
         </form>
       </div>
-  )
-}
-AddTodo = connect()(AddTodo)
+  );
+};
+AddTodo = connect()(AddTodo);
 
 export default AddTodo;

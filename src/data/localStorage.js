@@ -4,7 +4,7 @@
 export const loadState = () => {
   try {
     const serializedState = localStorage.getItem('state');
-    if(serializedState === null){
+    if (serializedState === null) {
       return undefined;
     }
     return JSON.parse(serializedState);
@@ -20,5 +20,4 @@ export const saveState = (state) => {
   } catch (err) {
     console.error('Could not save to localstorage: ', err);
   }
-
-}
+};
