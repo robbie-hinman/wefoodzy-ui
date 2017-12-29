@@ -10,9 +10,9 @@ let AddTodo = ({ dispatch }) => {
   let input;
 
   return (
-      <div>
-        <form
-            onSubmit={(e) => {
+    <div>
+      <form
+        onSubmit={(e) => {
               e.preventDefault();
               if (!input.value.trim()) {
                 return;
@@ -20,20 +20,23 @@ let AddTodo = ({ dispatch }) => {
               dispatch(addTodo(input.value));
               input.value = '';
             }}
-        >
+      >
         <FormGroup>
-        <InputGroup bsSize='lg'>
-        <FormControl type="text" ref={(node) => {
+          <InputGroup bsSize="lg">
+            <FormControl
+              type="text"
+              ref={(node) => {
                 input = node;
-              }} />
+              }}
+            />
 
-          <InputGroup.Button type="submit">
-            <Button>Add Todo</Button>
-          </InputGroup.Button>
+            <InputGroup.Button type="submit">
+              <Button>Add Todo</Button>
+            </InputGroup.Button>
           </InputGroup>
-          </FormGroup>
-        </form>
-      </div>
+        </FormGroup>
+      </form>
+    </div>
   );
 };
 AddTodo = connect()(AddTodo);

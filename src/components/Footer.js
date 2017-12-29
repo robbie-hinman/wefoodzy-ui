@@ -5,21 +5,21 @@ import React from 'react';
 import FilterLink from './containers/FilterLink';
 
 const Footer = () => (
- <p>
+  <p>
    Show:
-   {' '}
-   <FilterLink filter='all'>
+    {' '}
+    <FilterLink filter="all">
      All
-   </FilterLink>
-   {', '}
-   <FilterLink filter='active'>
+    </FilterLink>
+    {', '}
+    <FilterLink filter="active">
      Active
-   </FilterLink>
-   {', '}
-   <FilterLink filter='completed'>
+    </FilterLink>
+    {', '}
+    <FilterLink filter="completed">
      Completed
-   </FilterLink>
- </p>
+    </FilterLink>
+  </p>
 );
 
 export default Footer;

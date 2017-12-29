@@ -9,12 +9,12 @@ import App from './App';
 
 // how to pass a parameter in a url
 const Root = ({ store }) => (
-    <Provider store={store}>
-      <Router history={browserHistory} >
-        <Route path='/(:filter)' component={App} />
-        <Route path='/second' component={App} />
-      </Router>
-    </Provider>
+  <Provider store={store}>
+    <Router history={browserHistory} >
+      <Route path="/(:filter)" component={App} />
+      <Route path="/second" component={App} />
+    </Router>
+  </Provider>
 );
 
 Root.propTypes = {
